@@ -2,18 +2,21 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
-
-public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+namespace _456Lab.Models
 {
-    public DbSet<Course> Courses { get; set; }
-    public DbSet<Category> Categories { get; set; }
-    public ApplicationDbContext()
-        : base("DefaultConnection", throwIfV1Schema: false)
-    {
 
-    }
-    public static ApplicationDbContext Create()
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        return new ApplicationDbContext();
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public ApplicationDbContext()
+            : base("DefaultConnection", throwIfV1Schema: false)
+        {
+        }
+
+        public static ApplicationDbContext Create()
+        {
+            return new ApplicationDbContext();
+        }
     }
 }
