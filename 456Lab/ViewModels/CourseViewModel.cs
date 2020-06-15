@@ -13,9 +13,12 @@ namespace _456Lab.ViewModels
         public string Time { get; set; }
         public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }
+        
         public DateTime GetDateTime()
         {
+            String val = DateTime.Now.ToString();
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
+
     }
 }
