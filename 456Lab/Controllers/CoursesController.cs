@@ -28,6 +28,7 @@ namespace _456Lab.Controllers
             return View(viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {
             if(!ModelState.IsValid)

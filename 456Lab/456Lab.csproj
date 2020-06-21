@@ -45,6 +45,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\202006150059048_PopulateCategoryTable.Designer.cs">
       <DependentUpon>202006150059048_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006211308336_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\202006211308336_AddNameColumnToApplicationUser.Designer.cs">
+      <DependentUpon>202006211308336_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -282,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006150059048_PopulateCategoryTable.resx">
       <DependentUpon>202006150059048_PopulateCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006211308336_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>202006211308336_AddNameColumnToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
